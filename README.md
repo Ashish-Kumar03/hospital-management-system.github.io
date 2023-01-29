@@ -1,84 +1,47 @@
-# TCPDF
-*PHP PDF Library*
-
-[![Donate via PayPal](https://img.shields.io/badge/donate-paypal-87ceeb.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&currency_code=GBP&business=paypal@tecnick.com&item_name=donation%20for%20TCPDF%20project)
-*Please consider supporting this project by making a donation via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&currency_code=GBP&business=paypal@tecnick.com&item_name=donation%20for%20TCPDF%20project)*
-
-* **category**    Library
-* **author**      Nicola Asuni <info@tecnick.com>
-* **copyright**   2002-2020 Nicola Asuni - Tecnick.com LTD
-* **license**     http://www.gnu.org/copyleft/lesser.html GNU-LGPL v3 (see LICENSE.TXT)
-* **link**        http://www.tcpdf.org
-* **source**      https://github.com/tecnickcom/TCPDF
+# Hospital Management System
+Hospital Management System using MySQL, Php and Bootstrap
 
 
-## IMPORTANT
-A new version of this library is under development at https://github.com/tecnickcom/tc-lib-pdf and as a consequence this version will not receive any additional development or support.
-This version should be considered obsolete, new projects should use the new version as soon it will become stable.
+Video Demo : [Hospital Management System - Youtube](https://www.youtube.com/watch?v=W2XGSM5i9P8)
+
+Live Demo : [Hospital Management System - 000webhost by Kishan](https://kishan0725.000webhostapp.com)
+
+## Need to work on:
+
+1. Ability to accept the appointment by the doctor to acknowledge the patient that their appointment has been approved.
+2. User should not be allowed to register if he/she tries to provide the already registered email ID.
+3. The password should be encrypted and the password field shouldn't be displayed in the admin panel.
+4. Implementation of pagination for all the list view across the application.
+5. Bug fix - Bill payment receipt contains multiple record if the patient has associated with the same doctor multiple times.
+6. Addition of more fields in the prescription statement to make it more specific one.
+7. Addition of more details on payment - such as date of the payment made, amount paid, etc.
+8. Implementation of export button in admin module to export all details to an excel sheet.
+
+## Prerequisites
+1. Install XAMPP web server
+2. Any Editor (Preferably VS Code or Sublime Text)
+3. Any web browser with latest version
+
+## Languages and Technologies used
+1. HTML5/CSS3
+2. JavaScript (to create dynamically updating content)
+3. Bootstrap (An HTML, CSS, and JS library)
+4. XAMPP (A web server by Apache Friends)
+5. Php
+6. MySQL (An RDBMS that uses SQL)
+7. TCPDF (to generate PDFs)
 
 
+    
+### SOFTWARES USED
+  - XAMPP was installed on the Ubuntu 19.04 machine and APACHE2 Server and MySQL were initialized. And, files were built inside opt/lampp/htdocs/myhmsp
+  - Sublime Text 3.2 was used as a text editor.
+  - Google Chrome Version 77.0.3865.90 was used to run the project (localhost/myhmsp was used as the url).
+  
 
-## Description
-
-PHP library for generating PDF documents on-the-fly.
-
-### Main Features:
-* no external libraries are required for the basic functions;
-* all standard page formats, custom page formats, custom margins and units of measure;
-* UTF-8 Unicode and Right-To-Left languages;
-* TrueTypeUnicode, OpenTypeUnicode v1, TrueType, OpenType v1, Type1 and CID-0 fonts;
-* font subsetting;
-* methods to publish some XHTML + CSS code, Javascript and Forms;
-* images, graphic (geometric figures) and transformation methods;
-* supports JPEG, PNG and SVG images natively, all images supported by GD (GD, GD2, GD2PART, GIF, JPEG, PNG, BMP, XBM, XPM) and all images supported via ImagMagick (http://www.imagemagick.org/script/formats.php)
-* 1D and 2D barcodes: CODE 39, ANSI MH10.8M-1983, USD-3, 3 of 9, CODE 93, USS-93, Standard 2 of 5, Interleaved 2 of 5, CODE 128 A/B/C, 2 and 5 Digits UPC-Based Extension, EAN 8, EAN 13, UPC-A, UPC-E, MSI, POSTNET, PLANET, RMS4CC (Royal Mail 4-state Customer Code), CBC (Customer Bar Code), KIX (Klant index - Customer index), Intelligent Mail Barcode, Onecode, USPS-B-3200, CODABAR, CODE 11, PHARMACODE, PHARMACODE TWO-TRACKS, Datamatrix, QR-Code, PDF417;
-* JPEG and PNG ICC profiles, Grayscale, RGB, CMYK, Spot Colors and Transparencies;
-* automatic page header and footer management;
-* document encryption up to 256 bit and digital signature certifications;
-* transactions to UNDO commands;
-* PDF annotations, including links, text and file attachments;
-* text rendering modes (fill, stroke and clipping);
-* multiple columns mode;
-* no-write page regions;
-* bookmarks, named destinations and table of content;
-* text hyphenation;
-* text stretching and spacing (tracking);
-* automatic page break, line break and text alignments including justification;
-* automatic page numbering and page groups;
-* move and delete pages;
-* page compression (requires php-zlib extension);
-* XOBject Templates;
-* Layers and object visibility.
-* PDF/A-1b support.
-
-### Third party fonts:
-
-This library may include third party font files released with different licenses.
-
-All the PHP files on the fonts directory are subject to the general TCPDF license (GNU-LGPLv3),
-they do not contain any binary data but just a description of the general properties of a particular font.
-These files can be also generated on the fly using the font utilities and TCPDF methods.
-
-All the original binary TTF font files have been renamed for compatibility with TCPDF and compressed using the gzcompress PHP function that uses the ZLIB data format (.z files).
-
-The binary files (.z) that begins with the prefix "free" have been extracted from the GNU FreeFont collection (GNU-GPLv3).
-The binary files (.z) that begins with the prefix "pdfa" have been derived from the GNU FreeFont, so they are subject to the same license.
-For the details of Copyright, License and other information, please check the files inside the directory fonts/freefont-20120503
-Link : http://www.gnu.org/software/freefont/
-
-The binary files (.z) that begins with the prefix "dejavu" have been extracted from the DejaVu fonts 2.33 (Bitstream) collection.
-For the details of Copyright, License and other information, please check the files inside the directory fonts/dejavu-fonts-ttf-2.33
-Link : http://dejavu-fonts.org
-
-The binary files (.z) that begins with the prefix "ae" have been extracted from the Arabeyes.org collection (GNU-GPLv2).
-Link : http://projects.arabeyes.org/
-
-### ICC profile:
-
-TCPDF includes the sRGB.icc profile from the icc-profiles-free Debian package:
-https://packages.debian.org/source/stable/icc-profiles-free
+### Starting Apache And MySQL in XAMPP:
+  The XAMPP Control Panel allows you to manually start and stop Apache and MySQL. To start Apache or MySQL manually, click the ‘Start’ button under ‘Actions’.
+  
+  
 
 
-## Developer(s) Contact
-
-* Nicola Asuni <info@tecnick.com>
